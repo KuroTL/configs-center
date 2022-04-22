@@ -59,3 +59,5 @@ hystrix:
           # thread 通过线程数量来限制并发请求数，可以提供额外的保护，但有一定的延迟。一般用于网络调用
           # semaphore 通过semaphore count来限制并发请求数，适用于无网络的高并发请求
           strategy: SEMAPHORE
+
+myconfig-version: v1
