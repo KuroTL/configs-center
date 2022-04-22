@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: provider
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+  sleuth:
+    sampler:
+      rate: 1
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:90
+eureka:
+  instance:
+    appname: provider
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 60
+    metadata-map:
+      microserviceId: 9
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://ixiaoyu2:ixiaoyu2@127.0.0.1:7000/eureka
+    registry-fetch-interval-seconds: 5
+
+    healthcheck:
+      enabled: true
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true #开启远程服务下线management:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+logging:
+  level:
+    com.ixiaoyu2: trace
+
+
+
+
