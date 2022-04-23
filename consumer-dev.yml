@@ -60,4 +60,4 @@ hystrix:
           # semaphore 通过semaphore count来限制并发请求数，适用于无网络的高并发请求
           strategy: SEMAPHORE
 
-myconfig-version: v3
+myconfig-version: v4
